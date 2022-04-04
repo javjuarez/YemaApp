@@ -22,6 +22,7 @@ class DatosUsuario : AppCompatActivity() {
             setSupportActionBar(appToolbar.appToolbar)
             appToolbar.appToolbar.navigationIcon =
                 ResourcesCompat.getDrawable(resources, R.drawable.ic_baseline_arrow_back_24, null)
+            appToolbar.appToolbar.title = "Registro Productor"
 
             appToolbar.appToolbar.setNavigationOnClickListener {
                 startActivity(Intent(this@DatosUsuario, MainActivity::class.java))

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YemaApp">
         <activity
+            android:name=".DatosProductorSeleccionado"
+            android:exported="false" />
+        <activity
             android:name=".DatosUsuario"
             android:exported="false" />
         <activity

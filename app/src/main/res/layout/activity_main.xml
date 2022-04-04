@@ -10,7 +10,10 @@
         android:id="@+id/app_toolbar"
         layout="@layout/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -96,12 +99,27 @@
                 android:text="Conoce a nuestros productores"
                 android:textAlignment="center" />
 
+            <!--
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:columnWidth="160dp"
+                android:horizontalSpacing="16dp"
+                android:verticalSpacing="8dp"
+                android:numColumns="2">
+            </GridView>
+            -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:clickable="true"
-                android:focusable="true">
+                android:elevation="5dp"
+                android:focusable="true"
+                android:onClick="click"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -112,7 +130,7 @@
                         android:layout_width="160dp"
                         android:layout_height="160dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/prod1" />
+                        android:src="@drawable/prod1" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -146,6 +164,16 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:text="Ver más"
+                app:icon="@drawable/ic_baseline_add_24" />
 
         </LinearLayout>
 
