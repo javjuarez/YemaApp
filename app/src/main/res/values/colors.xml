@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Custom colors Yema App -->
+    <color name="yellow_200">#FFFCE082</color>
+    <color name="yellow_500">#FFFFC107</color>
+    <color name="yellow_700">#FFFE9F0B</color>
+    <color name="green_200">#FFA7D5A8</color>
+    <color name="green_700">#FF388D3C</color>
+
 </resources>
