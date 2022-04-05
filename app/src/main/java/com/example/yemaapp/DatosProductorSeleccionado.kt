@@ -3,6 +3,7 @@ package com.example.yemaapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
@@ -12,10 +13,16 @@ import com.example.yemaapp.databinding.ActivityDatosProductorSeleccionadoBinding
 class DatosProductorSeleccionado : AppCompatActivity() {
 
     private lateinit var binding: ActivityDatosProductorSeleccionadoBinding
+    private var id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDatosProductorSeleccionadoBinding.inflate(layoutInflater)
+
+        val bundle = intent.extras
+        id = bundle?.getInt("ID", 0)!!
+
+        Log.d("DATOS_PRODUCTOR", "id enviado = $id")
 
         with(binding) {
             setContentView(root)

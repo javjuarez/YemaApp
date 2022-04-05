@@ -29,7 +29,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="64dp">
 
             <com.mancj.materialsearchbar.MaterialSearchBar
                 style="@style/MaterialSearchBarLight"
@@ -99,71 +100,80 @@
                 android:text="Conoce a nuestros productores"
                 android:textAlignment="center" />
 
-            <!--
-            <GridView
+
+            <GridLayout
+                android:id="@+id/gridLayoutProductores"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:columnWidth="160dp"
-                android:horizontalSpacing="16dp"
-                android:verticalSpacing="8dp"
-                android:numColumns="2">
-            </GridView>
-            -->
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:focusable="true"
-                android:onClick="click"
-                app:cardCornerRadius="10dp">
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:columnCount="2"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <GridView
+                    android:id="@+id/gridViewProductores"
+                    android:columnWidth="160dp"
+                    android:horizontalSpacing="20dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="16dp" />
 
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/prod1" />
+            </GridLayout>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="16dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:gravity="center"
-                            android:text="Alma"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:clickable="true"-->
+<!--                android:elevation="5dp"-->
+<!--                android:focusable="true"-->
+<!--                android:onClick="click"-->
+<!--                app:cardCornerRadius="10dp">-->
 
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
-                            android:insetLeft="0sp"
-                            android:insetTop="0sp"
-                            android:insetRight="0sp"
-                            android:insetBottom="0sp"
-                            android:minWidth="0dp"
-                            app:icon="@drawable/ic_baseline_favorite_border_24"
-                            app:iconGravity="textStart"
-                            app:iconPadding="0dp" />
-                    </RelativeLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
 
-                </LinearLayout>
+<!--                    <ImageView-->
+<!--                        android:layout_width="160dp"-->
+<!--                        android:layout_height="160dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/prod1" />-->
 
-            </com.google.android.material.card.MaterialCardView>
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Alma"-->
+<!--                            android:textAppearance="?attr/textAppearanceHeadline6" />-->
+
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:insetLeft="0sp"-->
+<!--                            android:insetTop="0sp"-->
+<!--                            android:insetRight="0sp"-->
+<!--                            android:insetBottom="0sp"-->
+<!--                            android:minWidth="0dp"-->
+<!--                            app:icon="@drawable/ic_baseline_favorite_border_24"-->
+<!--                            app:iconGravity="textStart"-->
+<!--                            app:iconPadding="0dp" />-->
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/viewMore"
